@@ -1,0 +1,104 @@
+.close-button {
+  padding: var(--gap);
+  cursor: pointer;
+  transition: var(--transition-all);
+}
+
+.button-component img {
+  width: 1rem;
+  margin-left: -2px;
+  transform: rotate(45deg);
+}
+
+.button-component {
+  transition: var(--transition-all);
+  cursor: pointer;
+}
+
+.button-component.App:hover,
+.button-component.App:active,
+.button-component.App:focus {
+  background-color: var(--app-hover);
+  box-shadow: var(--app-glow);
+  border-bottom-width: var(--border-thickness-sm);
+}
+
+.button-component.Website:hover,
+.button-component.Website:active,
+.button-component.Website:focus {
+  background-color: var(--website-hover);
+  box-shadow: var(--website-glow);
+  border-bottom-width: var(--border-thickness-sm);
+}
+
+.button-component.Section:hover, 
+.button-component.Section:active, 
+.button-component.Section:focus {
+  background-color: var(--section-hover);
+  box-shadow: var(--section-glow);
+  border-bottom-width: var(--border-thickness-sm);
+}
+
+.button-component {
+  font-weight: 400;
+  padding: var(--button-padding);
+  border-radius: var(--border-radius-sm);
+}
+
+.button-component.App {
+  background-color: var(--app-color);
+  border-bottom: var(--border-thickness-md) solid var(--app-border-color);
+}
+
+.button-component.Website {
+  background-color: var(--website-color);
+  border-bottom: var (--border-thickness-md) solid var(--website-border-color);
+}
+
+.button-component.Section {
+  background-color: var(--section-color);
+  border-bottom: var(--border-thickness-md) solid var(--section-border-color);
+}
+
+.goBackBtn {
+  display: flex;
+  justify-content: center;
+  height: 50px;
+}
+
+.goBackBtn img { 
+  width: 1rem;
+  margin-left: -2px;
+  transform: rotate(-90deg);
+}
+
+.goBackBtn span {
+  height: 1.2rem;
+}
+
+.goBackBtn.close-button {
+  cursor: default;
+  padding: 1rem 0 0 0;
+}
+
+.goBackBtn.close-button div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--gap-esm);
+  background-color: var(--primary);
+  border: var(--border-thickness-sm) solid var(--tertiary);
+  border-bottom: var(--border-thickness-md) solid var(--tertiary);
+  color: var(--text);
+  padding: var(--button-padding);
+  border-radius: var(--border-radius-sm);
+  transition: var(--transition-all);
+  cursor: pointer;
+}
+
+.goBackBtn div:hover,
+.goBackBtn div:focus,
+.goBackBtn div:active {
+  background-color: var(--tertiary-hover);
+  border-bottom: var(--border-thickness-sm) solid var(--tertiary);
+}

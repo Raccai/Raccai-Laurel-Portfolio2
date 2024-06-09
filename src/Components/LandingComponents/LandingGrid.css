@@ -1,0 +1,310 @@
+.grid {
+  display: grid;
+  grid-template-areas: 
+    "a b b"
+    "a c d"
+    "e e f";
+  gap: var(--gap);
+}
+
+.grid-item,
+.grid-item-soon {
+  background-color: var(--primary);
+  border: var(--border-thickness-sm) solid var(--tertiary);
+  border-radius: var(--border-radius-md);
+  overflow: hidden;
+  position: relative; /* Required for absolutely positioned children */
+  height: 400px; /* Base height, can be adjusted */
+  transition: var(--transition-all);
+  cursor: pointer;
+}
+
+.grid-item-soon {
+  cursor: default;
+}
+
+.grid-item .main-img,
+.grid-item-soon .main-img {
+  object-fit: contain;
+  position: absolute; /* Allows for moving within the container */
+  top: 0;
+  left: 0;
+  transform: translate(var(--translate-x, 0), var(--translate-y, 0)) rotate(var(--rotate, 0));
+}
+
+.grid-item-soon .main-img,
+.grid-item-soon .pointer-container img {
+  filter: grayscale(100%);
+  opacity: 0.6;
+}
+
+/* About me images */
+.about-container {
+  margin-top: -63px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-container img{
+  scale: 0.3;
+}
+  
+#AboutMe1,
+#AboutMe2,
+#AboutMe3,
+#Logo {
+  object-fit: contain;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: var(--border-radius-md);
+}
+
+#AboutMe1,
+#AboutMe2,
+#AboutMe3 {
+  box-shadow: var(--drop-shadow-img);
+}
+
+#AboutMe1 {
+  z-index: 103;
+  left: -210px;
+  top: -194px;
+  transform: rotate(0deg);
+}
+
+#AboutMe2 {
+  z-index: 102;
+  left: -210px;
+  top: -194px;
+  transform: rotate(25deg);
+}
+
+#AboutMe3 {
+  z-index: 101;
+  left: -210px;
+  top: -194px;
+  transform: rotate(-25deg);
+}
+
+#Logo {
+  z-index: 100;
+  transform: translate(-30%, -10%) rotate(0deg);
+  scale: 0.6;
+}
+
+.grid-item:hover,
+.grid-item:active,
+.grid-item:focus {
+  background-color: var(--tertiary-hover);
+}
+
+.grid-item:hover .pointer-container,
+.grid-item:active .pointer-container,
+.grid-item:focus .pointer-container {
+  border: var(--border-thickness-sm) solid var(--secondary);
+  background-color: var(--tertiary-hover);
+  box-shadow: var(--drop-shadow);
+}
+
+.card-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.4rem 1.4rem;
+  height: 50px;
+}
+
+.card-title h4 {
+  color: var(--text);
+  font-weight: 100;
+  font-size: 1rem;
+}
+
+.card-title .pointer-container {
+  border: var(--border-thickness-sm) solid var(--primary);
+  width: auto;
+  border-radius: var(--border-radius-md);
+  padding: 0.4rem;
+  display: flex;
+  transition: var(--transition-all);
+}
+
+.card-title .pointer-container img {
+  width: 20px;
+  transform: rotate(45deg);
+}
+
+/* Styles for different span types */
+.card-title span.Mobile-App,
+.card-title span.Website,
+.card-title span.Section,
+.card-title span.Soon {
+  font-weight: 400;
+  padding: var(--button-padding);
+  border-radius: var(--border-radius-sm);
+}
+
+.card-title span.Mobile-App {
+  background-color: var(--app-color);
+  border-bottom: var(--border-thickness-md) solid var(--app-border-color);
+}
+
+.card-title span.Website {
+  background-color: var(--website-color);
+  border-bottom: var(--border-thickness-md) solid var(--website-border-color);
+}
+
+.card-title span.Section {
+  background-color: var(--section-color);
+  border-bottom: var(--border-thickness-md) solid var(--section-border-color);
+}
+
+.card-title span.Soon {
+  background-color: var(--tertiary);
+  border-bottom: var(--border-thickness-md) solid var(--primary-hover);
+}
+
+.project-name {
+  margin-left: 12px;
+}
+
+/* Specific grid item styles to match the layout */
+.grid-item.Tagawika {
+  grid-area: a;
+  height: 836px; /* Span two rows */
+}
+
+.grid-item.Edventure {
+  grid-area: b;
+}
+
+.grid-item.DanielKang {
+  grid-area: c;
+}
+
+.grid-item.NotaLingua {
+  grid-area: d;
+}
+
+.grid-item.JosephLapuz {
+  grid-area: e;
+}
+
+.grid-item.AboutMe {
+  grid-area: f;
+}
+
+/* Media Queries */
+@media (max-width: 2000px) {
+  .grid-item .main-img {
+    top: 0;
+    left: 80px;
+  }
+
+  #AboutMe1,
+  #AboutMe2,
+  #AboutMe3 {
+    left: -156px;
+    top: -196px;
+  }
+}
+
+@media (max-width: 1600px) {
+  .grid-item .main-img {
+    top: 0;
+    left: 0;
+  }
+
+  #AboutMe1,
+  #AboutMe2,
+  #AboutMe3 {
+    left: -210px;
+    top: -194px;
+  }
+}
+
+@media (max-width: 1400px) {
+  #AboutMe1,
+  #AboutMe2,
+  #AboutMe3 {
+    left: -240px;
+    top: -200px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .grid-item.Tagawika .project-name ,
+  .grid-item.DanielKang .project-name ,
+  .grid-item.NotaLingua .project-name ,
+  .grid-item.AboutMe .project-name  {
+    display: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-areas:
+      "a b"
+      "a c"
+      "d f"
+      "e e";
+  }
+  .card-title h4 {
+    font-size: 0.9rem; /* Reduce font size */
+  }
+  .grid-item {
+    height: 300px; 
+  }
+  .grid-item.Tagawika {
+    grid-area: a;
+    height: 636px; /* Span two rows */
+  }
+  .grid-item-soon {
+    height: 300px;
+  }
+  .card-title .project-name {
+    display: none;
+  }
+
+  #AboutMe1,
+  #AboutMe2,
+  #AboutMe3 {
+    left: -240px;
+    top: -240px;
+  }
+}
+
+@media (max-width: 620px) {
+  .grid {
+    grid-template-areas:
+      "a"
+      "b"
+      "c"
+      "d"
+      "e"
+      "f";
+  }
+  .grid-item.Tagawika {
+    grid-area: a;
+    height: 500px; /* Span two rows */
+  }
+  .grid-item {
+    height: 250px; 
+  }
+}
+
+@media (max-width: 480px) {
+  .grid-item {
+    height: 200px; 
+  }
+  .card-title h4 {
+    font-size: 0.88rem; /* Reduce font size */
+  }
+  .card-title .pointer-container img {
+    width: 15px; /* Reduce icon size */
+  }
+}

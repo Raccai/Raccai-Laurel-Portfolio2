@@ -1,0 +1,43 @@
+.project-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative; /* Add this for transition cover positioning */
+}
+  
+.project-wrapper {
+  height: 100%;
+  width: 60%;
+  padding: 20px 40px;
+}
+
+.project-wrapper h1 {
+  margin-bottom: 0rem;
+}
+
+.modal-overlay {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1002;
+}
+
+@media (max-width: 1024px) {
+  .project-wrapper {
+    width: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  .grid-item {
+    height: 200px; 
+  }
+  .card-title h4 {
+    font-size: 0.88rem; /* Reduce font size */
+  }
+  .card-title .pointer-container img {
+    width: 15px; /* Reduce icon size */
+  }
+}

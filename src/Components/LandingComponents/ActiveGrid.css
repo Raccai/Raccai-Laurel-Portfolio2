@@ -1,0 +1,180 @@
+.active-grid {
+  display: grid;
+  grid-template-columns: 100%;
+  gap: var(--gap);
+}
+
+.active-grid-item,
+.active-grid-item-soon {
+  border-radius: var(--border-radius-md);
+  height: 160px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  overflow: hidden;
+  background-color: var(--primary);
+  border: var(--border-thickness-sm) solid var(--tertiary);
+  transition: var(--transition-all);
+  cursor: pointer;
+}
+
+.active-grid-item-soon {
+  cursor: default;
+}
+
+.active-grid-item:hover,
+.active-grid-item:focus,
+.active-grid-item:active {
+  background-color: var(--tertiary-hover);
+  scale: 1.01;
+}
+
+.active-grid-item:hover img,
+.active-grid-item:focus img,
+.active-grid-item:active img {
+  scale: 1.03;
+}
+
+.active-grid-img {
+  overflow: hidden;
+  position: relative;
+  width: 60%;
+}
+
+.active-grid-img img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  transition: var(--transition-all-slower);
+}
+
+.active-grid-item-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--gap-esm);
+  padding: 0.4rem 1.4rem;
+  height: 50px;
+  height: auto;
+  transition: var(--transition-all);
+}
+
+.active-grid-item-content h1 {
+  color: var(--text);
+  font-weight: 100;
+  font-size: 3rem;
+  padding: 0;
+  margin: 0;
+}
+
+.active-grid-item-content .pointer-container {
+  width: auto;
+  border-radius: var(--border-radius-md);
+  padding: 0.4rem;
+  display: flex;
+  transition: var(--transition-all);
+  gap: var(--gap-sm);
+}
+
+.active-grid-item-content .pointer-container img {
+  width: 20px;
+  transform: rotate(45deg);
+  border-radius: var(--border-radius-md);
+  padding: 0.4rem;
+  transition: var(--transition-all);
+  border: var(--border-thickness-sm) solid var(--primary);
+  background-color: var(--primary);
+}
+
+.active-grid-item:hover .pointer-container img,
+.active-grid-item:active .pointer-container img,
+.active-grid-item:focus .pointer-container img {
+  border: var(--border-thickness-sm) solid var(--secondary);
+  background-color: var(--tertiary-hover);
+  box-shadow: var(--drop-shadow);
+}
+
+.active-grid-item-content span.Mobile-App,
+.active-grid-item-content span.Website,
+.active-grid-item-content span.Section,
+.active-grid-item-content span.Soon {
+  font-weight: 400;
+  padding: var(--button-padding);
+  border-radius: var(--border-radius-sm);
+}
+.active-grid-item-content span.Mobile-App {
+  background-color: var(--app-color);
+  border-bottom: var(--border-thickness-md) solid var(--app-border-color);
+}
+.active-grid-item-content span.Website {
+  background-color: var(--website-color);
+  border-bottom: var(--border-thickness-md) solid var(--website-border-color);
+}
+.active-grid-item-content span.Section {
+  background-color: var(--section-color);
+  border-bottom: var(--border-thickness-md) solid var(--section-border-color);
+}
+.active-grid-item-content span.Soon {
+  background-color: var(--tertiary);
+  border-bottom: var(--border-thickness-md) solid var(--primary-hover);
+}
+
+.active-grid-item-content .project-name {
+  margin-left: 12px;
+}
+
+@media (max-width: 1100px) {
+  .active-grid-item-content h1 {
+    font-size: 2rem;
+  }
+
+  .active-grid-item-content .pointer-container img {
+    display: none;
+  }
+}
+
+@media (max-width: 850px) {
+  .active-grid-item,
+  .active-grid-item-soon {
+    flex-direction: column;
+    width: 100%;
+    height: 300px;
+  }
+
+  .active-grid-img {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .active-grid-item-content {
+    flex-direction: row;
+    padding: var(--gap-sm) 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .active-grid-item-content {
+    align-items: center;
+    gap: var(--gap-md);
+  }
+  .active-grid-item-content h1 {
+    font-size: 1.4rem;
+  }
+  .active-grid-item-content .pointer-container {
+    font-size: 0.8rem;
+  }
+  .active-grid-item,
+  .active-grid-item-soon {
+    height: 200px;
+  }
+}
+
+@media (max-width: 400px) {
+  .active-grid-item-content {
+    flex-direction: column;
+  }
+  .active-grid-item-content h1 {
+    font-size: 1.4rem;
+    margin-left: -0.6rem;
+  }
+}

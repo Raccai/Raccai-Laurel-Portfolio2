@@ -1,0 +1,11 @@
+/* General Styles */
+.main-grid {
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.cont {
+  width: 80%;
+}
