@@ -180,7 +180,7 @@ export const projects = [
     mainImgClass: ["AboutMe1", "AboutMe2", "AboutMe3"],
     logoImgClass: ["Logo"],
     detailImgs: [AboutMe3, AboutMe4, AboutMe1, AboutMe2, AboutMe5],
-    techs: ["LinkedIn", "Behance", "Instagram"],
+    techs: ["LinkedIn", "Behance", "Instagram", "Github"],
     translateX: '10px', 
     translateY: '20px', 
     rotate: '5deg', 

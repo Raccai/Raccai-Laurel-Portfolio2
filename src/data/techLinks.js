@@ -13,4 +13,5 @@ export const techLinks = {
   "MongoDB": "https://www.mongodb.com/",
   "Express": "https://expressjs.com/",
   "Node": "https://nodejs.org/en",
+  "Github": "https://github.com/Raccai",
 }
