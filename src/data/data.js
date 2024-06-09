@@ -137,7 +137,7 @@ export const projects = [
     id: 4,
     name: "Joseph Lapuz",
     subtitle: "A minimalist portfolio showcasing architectural work",
-    span: "Website",
+    span: "Soon",
     style: "JosephLapuz",
     details: [
       `Joseph Lapuz's portfolio website highlights his architectural projects with a minimalist design approach. Developed in close collaboration to meet his vision, the site emphasizes his work without unnecessary distractions. The backend, built using the MERN stack, provides Joseph with full control over the website content and updates.`,
